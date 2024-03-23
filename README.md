@@ -46,16 +46,6 @@ nshell "list all files in the current directory" print
 nshell "list all files in the current directory" exec
 ```
 
-For a deeper dive into options and examples, refer to the [documentation](#documentation).
-
-## Documentation 📚
-
-NaturalShell boasts extensive documentation to facilitate your journey and maximize the utility of this robust tool:
-
-- [Installation Guide](https://github.com/theghostrat/NaturalShell/wiki/Installation)
-- [Usage Examples](https://github.com/theghostrat/NaturalShell/wiki/Usage-Examples)
-- [Language Model Configuration](https://github.com/theghostrat/NaturalShell/wiki/Language-Model-Configuration)
-- [Advanced Options](https://github.com/theghostrat/NaturalShell/wiki/Advanced-Options)
 
 ## Contributing 🤝
 
@@ -67,7 +57,6 @@ Community contributions are highly valued! If you're inclined to enhance Natural
 4. Push to the branch (`git push origin feature/your-feature-name`)
 5. Open a Pull Request
 
-For detailed instructions, peruse our [Contributing Guidelines](https://github.com/theghostrat/NaturalShell/blob/main/CONTRIBUTING.md).
 
 ## License 📄
 
@@ -83,12 +72,3 @@ NaturalShell flourishes thanks to the remarkable contributions of the following 
 - [langchain-anthropic](https://github.com/hwchase17/langchain/tree/main/langchain/llms/anthropic)
 
 We extend our gratitude to our phenomenal contributors and the vibrant open-source community for their invaluable support and contributions.
-
-## Join the Community! 🌎
-
-Stay updated on the latest news, updates, and discussions surrounding NaturalShell by joining our community:
-
-- [Twitter](https://twitter.com/your_username)
-- [Discord](https://discord.gg/your_invite_link)
-
-Share your thoughts, feedback, and ideas with us! Together, let's shape the future of natural language command execution and make shell computing more intuitive and accessible for all! 🚀
