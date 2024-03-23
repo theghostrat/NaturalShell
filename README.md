@@ -33,6 +33,23 @@ cd natural-shell
 ```bash
 pip install .
 ```
+To install NaturalShell directly from its GitHub repository using pip, you can use the following command:
+
+```bash
+pip install git+https://github.com/theghostrat/NaturalShell.git
+```
+
+This command will clone the repository and install the package along with its dependencies.
+
+Alternatively, if you want to install it in editable mode, allowing you to make changes to the code and see the changes reflected immediately without reinstalling, you can use:
+
+```bash
+pip install -e git+https://github.com/theghostrat/NaturalShell.git
+```
+
+This will install NaturalShell in editable mode, and any changes you make to the code will be reflected without needing to reinstall the package.
+
+Both of these commands will fetch the latest version of NaturalShell from its GitHub repository and install it on your system.
 
 ## Usage 🤖
 
