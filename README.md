@@ -19,7 +19,7 @@ NaturalShell isn't available on PyPI yet, but fret not, you can install it direc
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your_username/natural-shell.git
+git clone https://github.com/theghostrat/NaturalShell.git
 ```
 
 2. Navigate to the project directory:
@@ -52,10 +52,10 @@ For a deeper dive into options and examples, refer to the [documentation](#docum
 
 NaturalShell boasts extensive documentation to facilitate your journey and maximize the utility of this robust tool:
 
-- [Installation Guide](https://github.com/your_username/natural-shell/wiki/Installation)
-- [Usage Examples](https://github.com/your_username/natural-shell/wiki/Usage-Examples)
-- [Language Model Configuration](https://github.com/your_username/natural-shell/wiki/Language-Model-Configuration)
-- [Advanced Options](https://github.com/your_username/natural-shell/wiki/Advanced-Options)
+- [Installation Guide](https://github.com/theghostrat/NaturalShell/wiki/Installation)
+- [Usage Examples](https://github.com/theghostrat/NaturalShell/wiki/Usage-Examples)
+- [Language Model Configuration](https://github.com/theghostrat/NaturalShell/wiki/Language-Model-Configuration)
+- [Advanced Options](https://github.com/theghostrat/NaturalShell/wiki/Advanced-Options)
 
 ## Contributing 🤝
 
@@ -67,7 +67,7 @@ Community contributions are highly valued! If you're inclined to enhance Natural
 4. Push to the branch (`git push origin feature/your-feature-name`)
 5. Open a Pull Request
 
-For detailed instructions, peruse our [Contributing Guidelines](https://github.com/your_username/natural-shell/blob/main/CONTRIBUTING.md).
+For detailed instructions, peruse our [Contributing Guidelines](https://github.com/theghostrat/NaturalShell/blob/main/CONTRIBUTING.md).
 
 ## License 📄
 
