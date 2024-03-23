@@ -53,6 +53,32 @@ cd natural-shell
 pip install .
 ```
 
+## Configuration
+NaturalShell uses environment variables for configuration. You can set the following environment variables to customize its behavior:
+
+- `NSHELL_CONFIG`: Path to the configuration file (default: `config.yaml` in the current directory).
+
+For example, to specify a custom configuration file located at `/path/to/custom/config.yaml`, you can set the `NSHELL_CONFIG` environment variable as follows:
+
+```bash
+export NSHELL_CONFIG=/path/to/custom/config.yaml
+```
+
+1. Create a `config.yaml` file in the directory where you plan to use NaturalShell.
+
+2. Open the `config.yaml` file in a text editor.
+
+3. Add the following content to the `config.yaml` file:
+
+```yaml
+api_key: YOUR_API_KEY
+model: google-genai or openai,etc
+base_url: https://api.example.com/v1
+```
+
+Replace `YOUR_API_KEY` with your actual API key. You can choose the language model by setting the `model` field to one of the following options: `google-genai`, `openai`, or `anthropic`. If you're using a custom API endpoint for OpenAI, you can specify it in the `base_url` field.
+
+
 ## Usage 🤖
 
 Post-installation, commence your NaturalShell experience right from your terminal or command prompt:
