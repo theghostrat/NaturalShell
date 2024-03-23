@@ -1,7 +1,6 @@
 # NaturalShell 🐚✨
 
-NaturalShell, an innovative command-line tool, seamlessly bridges the gap between natural language and shell commands. With NaturalShell, executing complex terminal operations becomes as simple as conversing in everyday language. Bid farewell to memorizing cryptic commands and welcome a more intuitive approach to interacting with your system!
-
+ NaturalShell, an AI-driven command-line tool, effortlessly translates natural language into shell commands. Say goodbye to complex syntax and hello to intuitive interaction with your system. 
 ![Demo](https://user-images.githubusercontent.com/your_username/natural-shell/assets/demo.gif)
 
 ## Features ✨
