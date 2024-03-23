@@ -31,7 +31,7 @@ This will install NaturalShell in editable mode, and any changes you make to the
 
 Both of these commands will fetch the latest version of NaturalShell from its GitHub repository and install it on your system.
 
-###Manual Installation
+##Manual Installation
 
 NaturalShell isn't available on PyPI yet, but fret not, you can install it directly from the GitHub repository:
 
