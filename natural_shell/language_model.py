@@ -4,36 +4,50 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_openai import OpenAI
 from langchain_anthropic import Anthropic
 
-# def load_config():
-#     config_file = os.path.join(os.path.dirname(__file__), 'config.yaml')
-#     with open(config_file, 'r') as f:
-#         config = yaml.safe_load(f)
-#     return config
+class LanguageModel:
+    def __init__(self, config_file=None):
+        self.load_config(config_file)
 
-def load_config(config_file=None):
-    if config_file is None:
-        config_file = os.getenv('NSHELL_CONFIG', 'config.yaml')
+    def load_config(self, config_file=None):
+        if config_file is None:
+            # If no config file is provided, use default values
+            self.api_key = None
+            self.model = 'google-genai'
+            self.base_url = None
+            return
 
-    if not os.path.exists(config_file):
-        raise FileNotFoundError(f"Config file '{config_file}' not found.")
+        if not os.path.exists(config_file):
+            raise FileNotFoundError(f"Config file '{config_file}' not found.")
 
-    with open(config_file, 'r') as f:
-        config = yaml.safe_load(f)
-    return config
+        with open(config_file, 'r') as f:
+            config = yaml.safe_load(f)
 
-def get_language_model():
-    config = load_config()
-    model_name = config.get('model', 'google-genai')
-    api_key = config.get('api_key')
-    base_url = config.get('base_url')
+        self.api_key = config.get('api_key')
+        self.model = config.get('model', 'google-genai')
+        self.base_url = config.get('base_url')
+    
+    def get_language_model(self):
+        if self.model == "google-genai":
+            return ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=self.api_key, temperature=1)
+        elif self.model == "openai":
+            return OpenAI(api_key=self.api_key, temperature=1, base_url=self.base_url)
+        elif self.model == "anthropic":
+            return Anthropic(api_key=self.api_key, temperature=1)
+        else:
+            raise ValueError(f"Invalid model name: {self.model}")
 
-    if model_name == "google-genai":
-        return ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=api_key, temperature=1)
-    elif model_name == "openai":
-        return OpenAI(api_key=api_key, temperature=1, base_url=base_url)
-    elif model_name == "anthropic":
-        return Anthropic(api_key=api_key, temperature=1)
-    else:
-        raise ValueError(f"Invalid model name: {model_name}")
 
-llm = get_language_model()
+# Create a default instance
+llm = LanguageModel()
+
+# def get_language_model(llm_instance):
+#     if llm_instance.model == "google-genai":
+#         return ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=llm_instance.api_key, temperature=1)
+#     elif llm_instance.model == "openai":
+#         return OpenAI(api_key=llm_instance.api_key, temperature=1, base_url=llm_instance.base_url)
+#     elif llm_instance.model == "anthropic":
+#         return Anthropic(api_key=llm_instance.api_key, temperature=1)
+#     else:
+#         raise ValueError(f"Invalid model name: {llm_instance.model}")
+
+# __all__ = ["llm", "get_language_model","load_config"]
