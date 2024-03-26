@@ -12,10 +12,13 @@ The command should be compatible with the {platform} platform.
 Input: {query}
 """
 
-def execute_command(user_input, llm):
+def fetch_command(user_input, language_model=None):
+    if language_model is None:
+        language_model = llm.get_language_model()
+
     # Create the chain
     prompt = PromptTemplate(template=prompt_template, input_variables=["query"], partial_variables={"format_instructions": parser.get_format_instructions(), "platform": platform.system()})
-    chain = prompt | llm | parser
+    chain = prompt | language_model | parser
 
     retry = 0
     while retry <= 5:
@@ -28,3 +31,12 @@ def execute_command(user_input, llm):
             retry += 1
     if retry <= 5:
         return f"Error: {e}"
+
+def execute_command(user_input, language_model=None):
+    cmd = fetch_command(user_input, language_model)
+    import os
+    output = os.popen(cmd).read()
+    return cmd, output
+
+__all__ = ["fetch_command", "execute_command"]
+
