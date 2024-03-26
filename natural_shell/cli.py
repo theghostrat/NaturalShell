@@ -1,6 +1,6 @@
 import argparse
-from natural_shell.command_executor import execute_command
-from natural_shell.language_model import get_language_model
+from natural_shell.command_executor import execute_command, fetch_command
+from natural_shell.language_model import llm
 
 def main():
     parser = argparse.ArgumentParser(description="Convert natural language input to shell commands")
@@ -19,18 +19,16 @@ def main():
         parser.print_help()
         return
 
-    llm = get_language_model()
-    command = execute_command(args.input, llm)
-    if command:
-        args.func(command)
+    args.func(args.input, llm.get_language_model())
 
-def print_command(command):
+def print_command(input, language_model):
+    command = fetch_command(input, language_model)
     print(command)
 
-def exec_command(command):
-    import os
-    print(f"[+]executing: {command}")
-    os.system(command)
+def exec_command(input, language_model):
+    command, output = execute_command(input, language_model)
+    print(f"[+] executing: {command}")
+    print(output)
 
 if __name__ == "__main__":
     main()
