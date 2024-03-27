@@ -20,7 +20,7 @@ You can install NaturalShell via pip:
 ```bash
 pip install natural-shell
 ```
-# Or
+### Or
 
 To install NaturalShell directly from its GitHub repository using pip, you can use the following command:
 
