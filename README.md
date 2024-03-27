@@ -15,6 +15,13 @@ NaturalShell is an AI-driven command-line tool that effortlessly translates natu
 
 ## Installation 🚀
 
+You can install NaturalShell via pip:
+
+```bash
+pip install natural-shell
+```
+# Or
+
 To install NaturalShell directly from its GitHub repository using pip, you can use the following command:
 
 ```bash
