@@ -11,7 +11,7 @@ setup(
     description="A tool for converting natural language to shell commands",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    # url="https://github.com/your_username/natural-shell",
+    url="https://github.com/theghostrat/NaturalShell",  # Update with your GitHub repository URL
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
