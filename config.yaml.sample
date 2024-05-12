@@ -1,0 +1,5 @@
+api_key: KEY_GOES_HERE 
+model: google-genai 
+base_url: https://api.example.com/v1
+temperature: 0.2
+ 
