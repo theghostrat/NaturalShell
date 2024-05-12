@@ -5,11 +5,17 @@ from natural_shell.parser import parser
 
 # Define the prompt template
 prompt_template = """
-You are an AI assistant that converts natural language input into a real command.
-The output should be a valid JSON with a key "command" containing the real command.
+You are an AI assistant that converts natural language input into a real CLI command based on the user's intent.
+The output should be a valid JSON with the key "command" that has a value of type string containing the user's actual intended CLI command.
 The command should be compatible with the {platform} platform.
+
+### Formatting instructions:
 {format_instructions}
-Input: {query}
+
+### Input (contains user intent as a string):
+{query}
+
+### Output (contains valid JSON):
 """
 
 def fetch_command(user_input, language_model=None):
